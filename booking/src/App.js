@@ -16,10 +16,15 @@ import Bargraph from './Bargraph';
 import Plans from './Plans';
 import HealthQuotes from './HealthQuotes';
 import Prizes from './Prizes';
+import ChatBot from './ChatBot';
+import MedicineCalculator from './MedicineCalculator';
+import Calendar from './Calendar';
+import TaskOfTheDay from './TaskoftheDay';
 const App = () => {
   return (
     <>
    <Routes>
+   <Route path="/chatbot" element={<><ChatBot/></>}/>
    <Route path="/piechart" element={<><Piechart/><Bargraph/></>}/>
    <Route path="dailyplan" element={<><DailyPlan/></>}/>
    <Route path="/healthanalysis" element={<><HealthAnalysis/></>}/>
@@ -30,6 +35,8 @@ const App = () => {
     <Route path="/book" element={<><Navbar/><AppointmentForm/></>}/> 
     <Route path="/" element={<><Home/><Plans/><HealthQuotes/></>}/>
     <Route path="/dashboard" element={<><Dashboardnew/></>}/>
+    <Route path="/medicinecalculator"  element={<><MedicineCalculator/></>}/>
+    <Route path="/yogasan" element={<><Calendar/><TaskOfTheDay/></>}/>
    </Routes>
     </>
   );
